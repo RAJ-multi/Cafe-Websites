@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Nova Brew</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/menu.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/animations.css">
+
+    <!-- ================= FAVICON ================= -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../assets/icons/favicon_io/site.webmanifest">
+
+    <!-- ================= OG META ================= -->
+    <meta property="og:title" content="Menu | Nova Brew Cafe">
+    <meta property="og:description"
+        content="Discover our menu of handcrafted coffees, fresh pastries, and refreshing drinks at Nova Brew Cafe.">
+    <meta property="og:image" content="../assets/images/menu-og-image.jpg">
+    <meta property="og:url" content="https://www.novabrew.com/menu.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Nova Brew</div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-btn">Reserve Table</button>
+                <div id="authContainer" class="auth-container"></div>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="menu-hero">
+        <div class="menu-overlay"></div>
+        <div class="menu-hero-content">
+            <h1>Our Menu</h1>
+            <p>Handcrafted beverages &amp; fresh delights</p>
+        </div>
+    </section>
+
+    <!-- ================= MENU SECTION ================= -->
+    <section class="menu-section">
+        <div class="menu-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="coffee">Coffee</button>
+            <button class="filter-btn" data-category="pastries">Pastries</button>
+            <button class="filter-btn" data-category="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer">
+        <p>© 2026 Nova Brew. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="../js/script.js"></script>
+    <script src="../js/menu.js"></script>
+
+    <!-- ================= LOGIN MODAL ================= -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+
+            <form class="form_container" id="mainLoginForm">
+                <div class="logo_container">
+                    <span class="logo-icon">☕</span>
+                </div>
+
+                <div class="title_container">
+                    <p class="title">Login to your Account</p>
+                    <span class="subtitle">Welcome back to Nova Brew! Please login to continue.</span>
+                </div>
+
+                <div id="loginErrorMessage" class="auth-error-msg"></div>
+
+                <div class="input_container">
+                    <label class="input_label" for="email_field">Email</label>
+                    <input placeholder="name@mail.com" type="email" required class="input_field" id="email_field">
+                </div>
+
+                <div class="input_container">
+                    <label class="input_label" for="password_field">Password</label>
+                    <input placeholder="Password" type="password" required class="input_field" id="password_field">
+                </div>
+
+                <button type="submit" class="sign-in_btn"><span>Sign In</span></button>
+
+                <div class="separator">
+                    <hr class="line"><span>Or</span>
+                    <hr class="line">
+                </div>
+
+                <button type="button" class="sign-in_ggl" id="googleAuthBtn">Sign In with Google</button>
+                <button type="button" class="sign-in_apl" id="appleAuthBtn">Sign In with Apple</button>
+
+                <p class="note" id="termsTrigger">Terms of use &amp; Conditions</p>
+            </form>
+
+            <!-- Social Setup Form -->
+            <form class="form_container setup_container" id="socialSetupForm" style="display: none;">
+                <div class="title_container">
+                    <p class="title">Secure Your Account</p>
+                    <span class="subtitle" id="socialSetupSubtitle">Please set your password to complete
+                        registration.</span>
+                </div>
+
+                <div class="input_container">
+                    <label class="input_label">Temporary Code</label>
+                    <input type="text" class="input_field" id="oauthGeneratedCode" readonly>
+                </div>
+
+                <div class="input_container">
+                    <label class="input_label" for="new_password">New Password</label>
+                    <input placeholder="••••••••" type="password" class="input_field" id="new_password">
+                </div>
+
+                <div class="input_container">
+                    <label class="input_label" for="repeat_password">Repeat Password</label>
+                    <input placeholder="••••••••" type="password" class="input_field" id="repeat_password">
+                </div>
+
+                <div id="setupErrorMessage" class="auth-error-msg"></div>
+                <button type="submit" class="sign-in_btn"><span>Complete Registration</span></button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

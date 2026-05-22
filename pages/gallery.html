@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Nova Brew</title>
+
+    <!-- ================= CSS ================= -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/gallery.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="../CSS/animations.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../assets/icons/favicon_io/site.webmanifest">
+
+    <!-- ================= OG META ================= -->
+    <meta property="og:title" content="Gallery | Nova Brew Cafe">
+    <meta property="og:description"
+        content="Explore our gallery showcasing handcrafted brews,  delicious desserts, and our cozy cafe ambiance.">
+    <meta property="og:image" content="../assets/images/gallery-og-image.jpg">
+    <meta property="og:url" content="https://www.novabrew.com/gallery.html">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Nova Brew</div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-btn">Reserve Table</button>
+                <div id="authContainer" class="auth-container"></div>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="gallery-hero">
+        <div class="gallery-overlay"></div>
+        <div class="gallery-hero-content">
+            <h1>Our Gallery</h1>
+            <p>A visual journey through our finely crafted brews, sweet treats, and cozy spaces.</p>
+        </div>
+    </section>
+
+    <!-- ================= GALLERY SHOWCASE ================= -->
+    <section class="gallery-section">
+        <div class="gallery-filters">
+            <input type="radio" name="gallery-filter" id="all" checked hidden>
+            <label for="all" class="filter-btn">Show All</label>
+
+            <input type="radio" name="gallery-filter" id="coffee" hidden>
+            <label for="coffee" class="filter-btn">Brews</label>
+
+            <input type="radio" name="gallery-filter" id="desserts" hidden>
+            <label for="desserts" class="filter-btn">Desserts</label>
+
+            <input type="radio" name="gallery-filter" id="interior" hidden>
+            <label for="interior" class="filter-btn">Our Space</label>
+
+            <div class="gallery-grid">
+                <div class="gallery-item item-coffee">
+                    <img src="../assets/images/coffee-1.jpg" alt="Handcrafted Latte Art">
+                    <div class="item-overlay">
+                        <h3>Classic Latte Art</h3>
+                        <span>Brews</span>
+                    </div>
+                </div>
+                <div class="gallery-item item-desserts">
+                    <img src="../assets/images/ArtisanChocolateCake.jpg" alt="Chocolate Fudge Cake">
+                    <div class="item-overlay">
+                        <h3>Artisan Chocolate Cake</h3>
+                        <span>Desserts</span>
+                    </div>
+                </div>
+                <div class="gallery-item item-interior">
+                    <img src="../assets/images/LoungeCorner.jpg" alt="Cozy Lounge Seating Area">
+                    <div class="item-overlay">
+                        <h3>Lounge Corner</h3>
+                        <span>Our Space</span>
+                    </div>
+                </div>
+                <div class="gallery-item item-coffee">
+                    <img src="../assets/images/SignatureColdBrew.jpg" alt="Cold Brew Pouring Process">
+                    <div class="item-overlay">
+                        <h3>Signature Cold Brew</h3>
+                        <span>Brews</span>
+                    </div>
+                </div>
+                <div class="gallery-item item-desserts">
+                    <img src="../assets/images/AlmondCroissant.jpg" alt="Almond Croissant">
+                    <div class="item-overlay">
+                        <h3>Almond Croissant</h3>
+                        <span>Desserts</span>
+                    </div>
+                </div>
+                <div class="gallery-item item-interior">
+                    <img src="../assets/images/TheEspressoBar.jpg" alt="Espresso Bar">
+                    <div class="item-overlay">
+                        <h3>The Espresso Bar</h3>
+                        <span>Our Space</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer">
+        <p>© 2026 Nova Brew. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="../js/script.js"></script>
+
+    <!-- ================= LOGIN MODAL ================= -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+
+            <form class="form_container" id="mainLoginForm">
+                <div class="logo_container"><span class="logo-icon">☕</span></div>
+
+                <div class="title_container">
+                    <p class="title">Login to your Account</p>
+                    <span class="subtitle">Welcome back to Nova Brew! Enter your credentials.</span>
+                </div>
+
+                <div id="loginErrorMessage" class="auth-error-msg"></div>
+
+                <div class="input_container">
+                    <label class="input_label" for="email_field">Email</label>
+                    <input placeholder="name@mail.com" type="email" required class="input_field" id="email_field">
+                </div>
+
+                <div class="input_container">
+                    <label class="input_label" for="password_field">Password</label>
+                    <input placeholder="Password" type="password" required class="input_field" id="password_field">
+                </div>
+
+                <button type="submit" class="sign-in_btn"><span>Sign In</span></button>
+
+                <div class="separator">
+                    <hr class="line"><span>Or</span>
+                    <hr class="line">
+                </div>
+
+                <button type="button" class="sign-in_ggl" id="googleAuthBtn">Sign In with Google</button>
+                <button type="button" class="sign-in_apl" id="appleAuthBtn">Sign In with Apple</button>
+
+                <p class="note" id="termsTrigger">Terms of use &amp; Conditions</p>
+            </form>
+
+            <!-- Social Setup Form -->
+            <form class="form_container setup_container" id="socialSetupForm" style="display: none;">
+                <div class="title_container">
+                    <p class="title">Secure Your Account</p>
+                    <span class="subtitle" id="socialSetupSubtitle">Please set your password to complete
+                        registration.</span>
+                </div>
+
+                <div class="input_container">
+                    <label class="input_label">Temporary Code</label>
+                    <input type="text" class="input_field" id="oauthGeneratedCode" readonly>
+                </div>
+
+                <div class="input_container">
+                    <label class="input_label" for="new_password">New Password</label>
+                    <input placeholder="••••••••" type="password" class="input_field" id="new_password">
+                </div>
+
+                <div class="input_container">
+                    <label class="input_label" for="repeat_password">Repeat Password</label>
+                    <input placeholder="••••••••" type="password" class="input_field" id="repeat_password">
+                </div>
+
+                <div id="setupErrorMessage" class="auth-error-msg"></div>
+                <button type="submit" class="sign-in_btn"><span>Complete Registration</span></button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

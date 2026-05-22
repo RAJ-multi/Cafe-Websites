@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ================= META ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================= TITLE ================= -->
+    <title>Nova Brew Cafe</title>
+
+    <!-- ================= CSS ================= -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+
+    <!-- ================= GOOGLE FONTS ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- ================= FAVICON ================= -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/icons/favicon_io/site.webmanifest">
+
+    <!-- ================= OG META ================= -->
+    <title>Nova Brew Cafe | Handcrafted Specialty Coffee & Lounge</title>
+    <meta name="description"
+        content="Welcome to Nova Brew Cafe. Discover our artisan espresso blends, fresh gourmet pastries, and a cozy atmosphere perfect for working or relaxing. Visit us today! we offer a unique coffee experience with expertly crafted beverages and delicious treats. Our cozy cafe is the perfect spot to unwind, work, or catch up with friends. Experience the best coffee in town at Nova Brew Cafe. Visit us today and taste the difference! you'll find a welcoming atmosphere, free Wi-Fi, and a menu full of your favorite coffee drinks and fresh pastries. Whether you're looking for a morning pick-me-up or a cozy place to work, Nova Brew Cafe has you covered. Come see us and experience the best coffee in town! its home page features a stunning hero section with a captivating image of a coffee cup and a headline that reads "
+        Experience Coffee Like Never Before." The page also includes sections for the menu, gallery, and contact
+        information, all designed to provide visitors with an immersive experience of what Nova Brew Cafe has to offer.
+        With its inviting atmosphere and expertly crafted beverages, Nova Brew Cafe is the perfect destination for
+        coffee lovers looking for a unique and memorable experience.">
+    <meta name="keywords" content="coffee shop, espresso bar, artisan bakery, specialty coffee, Nova Brew, cafe lounge">
+
+    <meta property="og:title" content="Nova Brew Cafe | Handcrafted Specialty Coffee">
+    <meta property="og:description"
+        content="Experience coffee like never before. Cozy atmosphere, artisan roasts, and fresh treats.">
+    <meta property="og:image" content="assets/images/coffee-bg.jpg">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+
+        <!-- ========== NAVBAR ========== -->
+        <nav class="navbar">
+
+            <div class="logo">
+                Nova Brew
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/menu.html">Menu</a></li>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-btn">
+                    Reserve Table
+                </button>
+
+                <div id="authContainer" class="auth-container"></div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- ========== HERO SECTION ========== -->
+        <section id="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    Experience Coffee Like Never Before
+                </h1>
+
+                <p>
+                    Freshly brewed coffee, cozy atmosphere, and unforgettable moments.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" onclick="window.location.href='pages/menu.html'">
+                        Explore Menu
+                    </button>
+
+                    <button class="secondary-btn" onclick="window.location.href='pages/contact.html'">
+                        Visit Us
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="contact">
+
+        <div class="footer-content">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                123 Coffee Street, Brew City, USA<br>
+                Phone: (123) 456-7890<br>
+                Email: info@novabrew.com
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="js/script.js"></script>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- Login & Registration Modal Overlay                            -->
+    <!-- ------------------------------------------------------------- -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <!-- Close Button -->
+            <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+
+            <!-- ---- Form 1: Standard Login Form ---- -->
+            <form class="form_container" id="mainLoginForm">
+
+                <!-- Brand Icon -->
+                <div class="logo_container">
+                    <span class="logo-icon">☕</span>
+                </div>
+
+                <!-- Form Headers -->
+                <div class="title_container">
+                    <p class="title">Login to your Account</p>
+                    <span class="subtitle">Welcome back to Nova Brew! Enter your credentials to access your
+                        profile.</span>
+                </div>
+
+                <!-- Dynamic Error Message Container -->
+                <div id="loginErrorMessage" class="auth-error-msg"></div>
+
+                <!-- Credentials: Email Field -->
+                <div class="input_container">
+                    <label class="input_label" for="email_field">Email</label>
+                    <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+                        class="icon">
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#d4a373"
+                            d="M7 8.5L9.94202 10.2394C11.6572 11.2535 12.3428 11.2535 14.058 10.2394L17 8.5"></path>
+                        <path stroke-linejoin="round" stroke-width="1.5" stroke="#d4a373"
+                            d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z">
+                        </path>
+                    </svg>
+                    <input placeholder="name@mail.com" name="email" type="email" required class="input_field"
+                        id="email_field">
+                </div>
+
+                <!-- Credentials: Password Field -->
+                <div class="input_container">
+                    <label class="input_label" for="password_field">Password</label>
+                    <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+                        class="icon">
+                        <path stroke-linecap="round" stroke-width="1.5" stroke="#d4a373"
+                            d="M18 11.0041C17.4166 9.91704 16.273 9.15775 14.9519 9.0993C13.477 9.03404 11.9788 9 10.329 9C8.67911 9 7.18091 9.03404 5.70604 9.0993C3.95328 9.17685 2.51295 10.4881 2.27882 12.1618C2.12602 13.2541 2 14.3734 2 15.5134C2 16.6534 2.12602 17.7727 2.27882 18.865C2.51295 20.5387 3.95328 21.8499 5.70604 21.9275C6.42013 21.9591 7.26041 21.9834 8 22">
+                        </path>
+                        <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#d4a373"
+                            d="M6 9V6.5C6 4.01472 8.01472 2 10.5 2C12.9853 2 15 4.01472 15 6.5V9"></path>
+                    </svg>
+                    <input placeholder="Password" name="password" type="password" required class="input_field"
+                        id="password_field">
+                </div>
+
+                <!-- Native Login Submit -->
+                <button title="Sign In" type="submit" class="sign-in_btn">
+                    <span>Sign In</span>
+                </button>
+
+                <!-- Section Separator Line -->
+                <div class="separator">
+                    <hr class="line">
+                    <span>Or</span>
+                    <hr class="line">
+                </div>
+
+                <!-- ---- Third-Party OAuth Sign-In Options ---- -->
+                <!-- Google Login Button -->
+                <button title="Sign In with Google" type="button" class="sign-in_ggl" id="googleAuthBtn">
+                    <svg height="18" width="18" viewBox="0 0 32 32">
+                        <path
+                            d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"
+                            fill="#fbbc05"></path>
+                    </svg>
+                    <span>Sign In with Google</span>
+                </button>
+
+                <!-- Apple Login Button -->
+                <button title="Sign In with Apple" type="button" class="sign-in_apl" id="appleAuthBtn">
+                    <svg viewBox="0 0 256 315" height="18px" width="16px">
+                        <path fill="#ffffff"
+                            d="M213.803394,167.030943 C214.2452,214.609646 255.542482,230.442639 256,230.644727 C255.650812,231.761357 249.401383,253.208293 234.24263,275.361446 C221.138555,294.513969 207.538253,313.596333 186.113759,313.991545 C165.062051,314.379442 158.292752,301.507828 134.22469,301.507828 C110.163898,301.507828 102.642899,313.596301 82.7151126,314.379442 C62.0350407,315.16201 46.2873831,293.668525 33.0744079,274.586162 C6.07529317,235.552544 -14.5576169,164.286328 13.147166,116.18047 C26.9103111,92.2909053 51.5060917,77.1630356 78.2026125,76.7751096 C98.5099145,76.3877456 117.677594,90.4371851 130.091705,90.4371851 C142.497945,90.4371851 165.790755,73.5415029 190.277627,76.0228474 C200.528668,76.4495055 229.303509,80.1636878 247.780625,107.209389 C246.291825,108.132333 213.44635,127.253405 213.803394,167.030988 M174.239142,50.1987033 C185.218331,36.9088319 192.607958,18.4081019 190.591988,0 C174.766312,0.636050225 155.629514,10.5457909 144.278109,23.8283506 C134.10507,35.5906758 125.195775,54.4170275 127.599657,72.4607932 C145.239231,73.8255433 163.259413,63.4970262 174.239142,50.1987249">
+                        </path>
+                    </svg>
+                    <span>Sign In with Apple</span>
+                </button>
+
+                <!-- Legal Links Footer -->
+                <p class="note" id="termsTrigger">Terms of use &amp; Conditions</p>
+            </form>
+
+            <!-- ---- Form 2: OAuth Account Password Setup (Hidden by Default) ---- -->
+            <form class="form_container setup_container" id="socialSetupForm" style="display: none;">
+
+                <!-- Setup Form Headers -->
+                <div class="title_container">
+                    <p class="title">Secure Your Account</p>
+                    <span class="subtitle" id="socialSetupSubtitle">A secure authentication code was initialized. Please
+                        configure your password below to finalize registration.</span>
+                </div>
+
+                <!-- Secure Token Identifier Fields (Read-Only) -->
+                <div class="input_container">
+                    <label class="input_label">Temporary Unique ID Code</label>
+                    <input type="text" class="input_field" id="oauthGeneratedCode" readonly
+                        style="color: #d4a373; font-family: monospace; letter-spacing: 2px; text-align: center;">
+                </div>
+
+                <!-- Password Configuration Input Fields -->
+                <div class="input_container">
+                    <label class="input_label" for="new_password">New Password</label>
+                    <input placeholder="••••••••" type="password" required class="input_field" id="new_password">
+                </div>
+
+                <div class="input_container">
+                    <label class="input_label" for="repeat_password">Repeat Password</label>
+                    <input placeholder="••••••••" type="password" required class="input_field" id="repeat_password">
+                </div>
+
+                <!-- Dynamic Error Message Container (Setup Form) -->
+                <div id="setupErrorMessage" class="auth-error-msg"></div>
+
+                <!-- Configuration Submit Button -->
+                <button type="submit" class="sign-in_btn">
+                    <span>Save and Complete Login</span>
+                </button>
+            </form>
+
+        </div> <!-- End of modal-content -->
+    </div> <!-- End of loginModal overlay -->
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+/* ================= TABLET & FOLDABLES ================= */
+
+@media(max-width: 992px){
+
+    .hero-content h1{
+        font-size: 3rem;
+    }
+
+    /* ===== NAVBAR (Moved here to trigger on tablets/folds) ===== */
+
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #111;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-top: 80px;
+        transition: 0.5s;
+    }
+
+    .nav-links.active{
+        right: 0;
+    }
+
+    .nav-btn{
+        display: none;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 768px){
+
+    /* ===== HERO ===== */
+
+    .hero-content{
+        padding: 0 20px;
+    }
+
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
+
+    .hero-content p{
+        font-size: 1rem;
+    }
+
+    .hero-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 768px){
+
+    /* ===== NAVBAR ===== */
+
+    .nav-links{
+        position: absolute;
+
+        top: 100%;
+        right: -100%;
+
+        width: 250px;
+        height: 100vh;
+
+        background-color: #111;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+
+        padding-top: 80px;
+
+        transition: 0.5s;
+    }
+
+    .nav-links.active{
+        right: 0;
+    }
+
+    .nav-btn{
+        display: none;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    /* ===== HERO ===== */
+
+    .hero-content{
+        padding: 0 20px;
+    }
+
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
+
+    .hero-content p{
+        font-size: 1rem;
+    }
+
+    .hero-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
