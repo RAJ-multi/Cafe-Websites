@@ -29,29 +29,60 @@ A modern, elegant, and fully responsive coffee shop website built with pure HTML
 - **Responsive Design** (Mobile-first)
 - **localStorage** for user & wishlist data
 
-## 📁 Project Structure
+### 📂 Project Structure
 
-```bash
-Nova-Brew-Cafe/
-├── index.html
-├── pages/
-│   ├── about.html
-│   ├── menu.html
-│   ├── gallery.html
-│   └── contact.html
-├── CSS/
-│   ├── style.css
-│   ├── responsive.css
-│   ├── animations.css
-│   ├── menu.css
-│   ├── gallery.css
-│   ├── contact.css
-│   └── aboutstyle.css
-├── js/
-│   ├── script.js
-│   └── menu.js
-├── assets/
-│   ├── images/
-│   └── videos/
-└── README.md
-```
+Cafe-Website/
+├── 🌐 index.html
+│
+├── 🎨 css/
+│   ├── 📄 aboutstyle.css
+│   ├── 📄 animations.css
+│   ├── 📄 contact.css
+│   ├── 📄 gallery.css
+│   ├── 📄 menu.css
+│   ├── 📄 responsive.css
+│   └── 📄 style.css
+│
+├── ⚙️ js/
+│   ├── 📜 menu.js
+│   └── 📜 script.js
+│
+├── 📦 assets/
+│   ├── 🖼️ images/
+│   │   ├── 📷 AlmondCroissant.jpg
+│   │   ├── 📷 ArtisanChocolateCake.jpg
+│   │   ├── 📷 barista.jpg
+│   │   ├── 📷 cafe-interior.jpg
+│   │   ├── 📷 CaramelLatte.png
+│   │   ├── 📷 coffee-1.jpg
+│   │   ├── 📷 coffee-bg.jpg
+│   │   ├── 📷 contact-bg.jpg
+│   │   ├── 📷 founder.jpg
+│   │   ├── 📷 LoungeCorner.jpg
+│   │   ├── 📷 manager.jpg
+│   │   ├── 📷 MatchaLatte.png
+│   │   ├── 📷 SignatureColdBrew.jpg
+│   │   └── 📷 TheEspressoBar.jpg
+│   │
+│   ├── 🎥 videos/
+│   │   └── 🎬 cafe-video.mp4
+│   │
+│   ├── 🏷️ icons/
+│   │   └── 📁 favicon_io/
+│   │       ├── 🏷️ android-chrome-192x192.png
+│   │       ├── 🏷️ android-chrome-512x512.png
+│   │       ├── 🏷️ apple-touch-icon.png
+│   │       ├── 🏷️ favicon-16x16.png
+│   │       ├── 🏷️ favicon-32x32.png
+│   │       ├── 🏷️ favicon.ico
+│   │       └── 📄 site.webmanifest
+│   │
+│   └── 🔤 fonts/
+│
+├── 📄 pages/
+│   ├── 📄 about.html
+│   ├── 📄 contact.html
+│   ├── 📄 gallery.html
+│   └── 📄 menu.html
+│
+└── 📖 README.md
