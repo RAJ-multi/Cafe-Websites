@@ -33,8 +33,6 @@ A modern, elegant, and fully responsive coffee shop website built with pure HTML
 
 ```text
 Cafe-Website/
-├── 🌐 index.html
-│
 ├── 🎨 css/
 │   ├── 📄 aboutstyle.css
 │   ├── 📄 animations.css
@@ -86,5 +84,6 @@ Cafe-Website/
 │   ├── 📄 gallery.html
 │   └── 📄 menu.html
 │
+├── 🌐 index.html
 └── 📖 README.md
 ```
